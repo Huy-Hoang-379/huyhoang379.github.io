@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Hoang</title>
+        <meta chatset="utf-8">
+        <!-- CSS trong html external: 
+            Sử dụng file *.css riêng
+            Tác động đến tất cả các trang web liên kết đến file css này
+            Liên kết với trang web = thẻ <link> trong thẻ <head>
+                Dễ quán lý do riêng biệt.
+                Muốn sửa lại tất cả trang web trong website chỉ cần sửa ở 1 nơi.
+        -->
+        <link rel="stylesheet" href="styles.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- CSS trong html internal: 
+            Dùng cặp thẻ style ở giữa cặp thẻ head: 
+            Tác động đến tất cả các thẻ tương ứng trong trang web:
+            <head>
+                <style>
+                    h1 {color: white;}
+                </style>
+            </head>
+        -->
+        <!-- 
+            Internal JavaScript:
+                Lập trình trực tiếp vào giữa cặp thẻ script trong file html, ở giữa cặp thẻ head hoặc body:
+                <script> document.getElementById("idXinChao").innerHTML = "Hello JavaScript!"; </script>
+         -->
+    </head>
+
+    <body>
+        <header>
+            <!-- CSS trong html inline: 
+                Dùng thuộc tính style của thẻ HTML:
+                Chỉ tác động đến thẻ được sửa:
+                <h1 style="color:white;">Chào mừng mọi người</h1> -->
+            <h1>Chào mừng mọi người</h1>
+            <p>Xin chào mọi người. Mình là Hoàng. 
+                Cảm ơn các bạn đã ghé thăm.</p>
+        </header>
+
+        <nav class="center">
+            <a href="#section0">Thử JavaScript</a> |
+            <a href="#section1">Nội Dung</a> |
+            <a href="#section2">Đường Links</a> |
+            <a href="#section3">Thông Tin</a> |
+        </nav>
+
+        <div class="row">
+            <section id="section0", class="column">
+                <h2>Thử JavaScript</h2>
+                <label for="txtTen">Nhập tên:</label>
+                <input type="text" id="txtTen">
+                <button type="button" id="btnChao">Xin Chào</button>
+                <br>
+                <br>
+                <label for="txtNS">Năm sinh:</label>
+                <input type="text" id="txtNS">
+                <button type="button" id="btnTuoi">Tính tuổi</button>
+            </section>
+            <section id="section1", class="column">
+                <h2>Nội dung trang web</h2> 
+                <p>Đây là nội dung trang web của mình. 
+                    <br>
+                    Trang web này giới thiệu về sở thích và nghề nghiệp.</p>
+            </section>
+
+            <section id="section2", class="column">
+                <h2>Các đường link hữu ích</h2>
+                <ol>
+                    <li>
+                        Trang Youtube tiếng Việt của mình <br>
+                        <a href="https://www.youtube.com/@hohuyhoang3368">Youtube Hồ Huy Hoàng</a>
+                    </li>
+                    <li>
+                        Muốn tìm kiếm gì thì ghé trang này 
+                        <a href="https://www.google.com">Google</a>
+                    </li>
+                </ol>
+            </section>
+
+            <section id="section3", class="column">
+                <h2>Các thông tin cá nhân</h2>
+                <ul>
+                    <li>Tên: Hoàng</li>
+                    <li>Địa chỉ: TP.HCM</li>
+                    <li>
+                        Còn đây là ảnh của mình
+                        <br>
+                        <img src="anh.jpg" alt="ảnh" width="90" height="120">
+                    </li>
+                </ul>
+            </section>
+        </div>
+        <footer>
+            <h3>&copy; 2023 Bản quyền thuộc về Hoàng.</h3>
+        </footer>
+
+        <!-- External JavaScript:
+            Lập trình trong file riêng, vd: myScript.js
+            Kết nối file này tới file html = cách thêm vào cuối file html (vì nếu gặp file js trước các lệnh html sẽ bị lỗi):
+                <script src="myScript.js"></script>
+            ->  Dễ quản lý và lập trình các file html, css, js riêng biệt
+                Trình duyệt có thể Cached (lưu lại) những file không thay đổi -> kh cần tải lại -> tăng tốc độ tải trang web cho ng` dung`    
+        -->
+        <script src="myScript.js"></script>
+    </body>
+</html>

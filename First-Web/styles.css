@@ -1,0 +1,62 @@
+/* CSS Element Selector */
+header {
+    color: white;
+    background-color: green;
+}
+/* CSS ID Selector */
+#section0 {
+    border-radius: 25px; /*góc cong đường viền*/
+    border: 2px solid blue; /* độ dày đường viền - nét liền - màu viền*/
+    /* từ viền tới nội dung bên trong*/
+    /* padding: 20px;  */
+    /* từ đường viền tới nội dung ngoài*/
+    /* margin: 20px;  */
+
+    /* Nên làm theo % */
+    padding: 0.5%;
+    margin: 1%;
+}
+#section1, #section2, #section3 {
+    border-radius: 25px; /*góc cong đường viền*/
+    border: 2px solid blue; /* độ dày đường viền - nét liền - màu viền*/
+    /* từ viền tới nội dung bên trong*/
+    /* padding: 20px;  */
+    /* từ đường viền tới nội dung ngoài*/
+    /* margin: 20px;  */
+
+    /* Nên làm theo % */
+    padding: 1%;
+    margin: 1%;
+}
+
+/* CSS class Selector */
+.center {
+    text-align: center;
+}
+
+/* 
+    CSS Seletor:
+    .class: .center{}: tất cả các thẻ có thuộc tính class="center"
+    #id: #section1{}: thẻ có định danh id="section1" 
+    thẻ: header{}: tất cả các thẻ loại header
+    thẻ.class: header.class{}: tất cả các thẻ loại header có thuộc tính class="center"
+    *: *{} :tất cả các thẻ
+    thẻ1, thẻ2, ...: header, p{}: tất cả các thẻ loại header và loại p
+*/
+/* CSS Responsive */
+.row:after {
+    content: ""; /* sau row kh có nội dung trống */
+    display: table; /* thuộc tính hiển thị kiểu bảng */
+    clear: both; /* xóa cả trên và dưới */
+}
+
+.column {
+    float: left; /* nổi lên ở bên trái */
+    width: 45%; /* mỗi column chiếm 45% chiều rộng: màn hình rộng chia 2 cột */
+}
+/* khi chiều rộng dưới 900px thì thay đổi */
+@media screen and (max-width:900px) {
+    .column {
+        width: 95%;
+    }
+}
